@@ -21,6 +21,7 @@ html {
 
 body {
   font-family: "Courier New", Courier, monospace;
+  background-color: #eee;
 }
 
 .title {
@@ -31,7 +32,7 @@ body {
 
 .container {
   margin: 2rem auto;
-  width: 40rem;
+  width: 50rem;
   display: -ms-grid;
   display: grid;
   grid-gap: 1rem;
@@ -52,9 +53,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 8rem;
-  width: 8rem;
-  border: 0.5rem solid orangered;
+  height: 12rem;
+  width: 9rem;
+  border: 0.5rem solid #ff5722;
   margin: 0 auto;
   position: relative;
   -webkit-transition: -webkit-transform 2s ease;
@@ -71,7 +72,7 @@ body {
 .card-front {
   position: relative;
   z-index: 1;
-  background-color: orange;
+  background-color: #ff9800;
 }
 
 .card-back {
@@ -80,7 +81,8 @@ body {
   left: 0;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  background-color: #ddd;
+  background-color: #ffc107;
+  font-size: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

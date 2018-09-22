@@ -1,3 +1,7 @@
+$cardBack: #ff9800;
+$cardFront: #ffc107;
+$cardBorder: #ff5722;
+
 *::before,
 *::after,
 * {
@@ -19,6 +23,7 @@ html {
 
 body {
   font-family: "Courier New", Courier, monospace;
+  background-color: #eee;
 }
 
 .title {
@@ -29,7 +34,7 @@ body {
 
 .container {
   margin: 2rem auto;
-  width: 40rem;
+  width: 50rem;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
@@ -41,9 +46,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 8rem;
-  width: 8rem;
-  border: 0.5rem solid orangered;
+  height: 12rem;
+  width: 9rem;
+  border: 0.5rem solid $cardBorder;
   margin: 0 auto;
   position: relative;
   transition: transform 2s ease;
@@ -56,7 +61,7 @@ body {
     // ** need position relative to set z-index **
     position: relative;
     z-index: 1;
-    background-color: orange;
+    background-color: $cardBack;
   }
   &-back {
     @extend %card-side;
@@ -64,8 +69,8 @@ body {
     top: 0;
     left: 0;
     transform: rotateY(180deg);
-    background-color: #ddd;
-
+    background-color: $cardFront;
+    font-size: 2.5rem;
     // ONLY FOR TESTING:
     display: flex;
     justify-content: center;
