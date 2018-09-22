@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Comic Sans", "Comic Sans MS", cursive;
   background-color: #eee;
 }
 
@@ -39,6 +39,15 @@ body {
   grid-gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
+
+  @media screen and (max-width: 35em) {
+    grid-gap: 0.75rem;
+    width: 45rem;
+  }
+
+  @media screen and (max-width: 30em) {
+    width: 36rem;
+  }
 }
 
 .card {
@@ -76,9 +85,17 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  @media screen and (max-width: 35em) {
+    height: 11rem;
+    width: 8rem;
+  }
+  @media screen and (max-width: 30em) {
+    height: 10rem;
+    width: 6.5rem;
+  }
 }
 
-// ONLY FOR TESTING:
 .rotate-js {
   transform: rotateY(180deg);
 }
