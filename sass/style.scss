@@ -1,6 +1,8 @@
 $cardBack: #ff9800;
 $cardFront: #ffc107;
 $cardBorder: #ff5722;
+$btnColor: #bdc3c7;
+$btnShadow: grey;
 
 *::before,
 *::after,
@@ -39,6 +41,11 @@ body {
   grid-gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
+
+  &--btn {
+    display: flex;
+    justify-content: center;
+  }
 
   @media screen and (max-width: 35em) {
     grid-gap: 0.75rem;
@@ -93,6 +100,25 @@ body {
   @media screen and (max-width: 30em) {
     height: 10rem;
     width: 6.5rem;
+  }
+}
+
+.btn {
+  // display: none;
+  font-weight: bolder;
+  margin: 0 auto;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  background-color: $btnColor;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 0.3rem 0.2rem $btnShadow;
+
+  &:active {
+    transform: translateY(0.1rem);
+    box-shadow: none;
   }
 }
 

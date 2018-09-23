@@ -1,9 +1,10 @@
 // Global variables
 const container = document.querySelector(".container");
 const cards = document.querySelectorAll(".card");
+const resetBtn = document.querySelector(".btn");
 
-let firstPick = null;
-let secondPick = null;
+let firstPick;
+let secondPick;
 
 // Event handlers
 
@@ -23,9 +24,18 @@ cards.forEach(card => {
         selectCard(cardBack);
         // Only compare the two cards unless they have a value
         if (firstPick && secondPick) compareCards(firstPick, secondPick);
+
+        displayBtn();
       }
     }
   });
+});
+
+resetBtn.addEventListener("click", () => {
+  // Need to remove any pre-existing rotate-js class from cards
+  cards.forEach(card => card.classList.remove("rotate-js"));
+  // Need a setTimeout call otherwise change will happen instant
+  setTimeout(init, 1000);
 });
 
 window.addEventListener("load", init);
@@ -69,6 +79,12 @@ function selectCard(cardSide) {
 }
 
 function init() {
+  // If reset button is showing, hide it
+  resetBtn.style.display = "none";
+
+  // Initalize both firstPick and secondPick as null
+  firstPick = null;
+  secondPick = null;
   // Assign cards to deck
   const deck = [...cards];
   // Remove each card from game board
@@ -79,4 +95,13 @@ function init() {
   shuffle(deck);
   // Reassign shuffled card to the game board
   deck.forEach(card => container.appendChild(card));
+}
+
+function displayBtn() {
+  const result = Array.from(cards).every(card =>
+    card.classList.contains("rotate-js")
+  );
+  if (result) {
+    resetBtn.style.display = "block";
+  }
 }
