@@ -60,7 +60,7 @@ body {
 
 @media screen and (max-width: 30em) {
   .container {
-    width: 36rem;
+    width: 35rem;
   }
 }
 
@@ -134,8 +134,8 @@ body {
 
 @media screen and (max-width: 30em) {
   .card {
-    height: 10rem;
-    width: 6.5rem;
+    height: 9rem;
+    width: 6rem;
   }
 }
 
@@ -159,6 +159,10 @@ body {
           transform: translateY(0.1rem);
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.fab {
+  color: #f44336;
 }
 
 .rotate-js {

@@ -32,7 +32,7 @@
   }
 
   @media screen and (max-width: 30em) {
-    width: 36rem;
+    width: 35rem;
   }
 }
 
@@ -81,8 +81,8 @@
     width: 8rem;
   }
   @media screen and (max-width: 30em) {
-    height: 10rem;
-    width: 6.5rem;
+    height: 9rem;
+    width: 6rem;
   }
 }
 
@@ -103,6 +103,10 @@
     transform: translateY(0.1rem);
     box-shadow: none;
   }
+}
+
+.fab {
+  color: $iconColor;
 }
 
 .rotate-js {

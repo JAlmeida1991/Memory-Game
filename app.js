@@ -8,9 +8,9 @@
 
   let firstPick;
   let secondPick;
+  let totalCombos;
 
   // Event handlers
-
   cards.forEach(card => {
     card.addEventListener("click", e => {
       // Need to check if user actually picked the front of the card
@@ -27,8 +27,6 @@
           selectCard(cardBack);
           // Only compare the two cards unless they have a value
           if (firstPick && secondPick) compareCards(firstPick, secondPick);
-
-          displayBtn();
         }
       }
     });
@@ -66,6 +64,9 @@
       if (!result) {
         firstCard.parentElement.classList.remove("rotate-js");
         secondCard.parentElement.classList.remove("rotate-js");
+      } else {
+        totalCombos++;
+        if (totalCombos === 10) displayBtn();
       }
       firstPick = null;
       secondPick = null;
@@ -89,6 +90,9 @@
     // Initalize both firstPick and secondPick as null
     firstPick = null;
     secondPick = null;
+
+    // Initalize total combos to 0
+    totalCombos = 0;
     // Assign cards to deck
     const deck = [...cards];
     // Remove each card from game board
@@ -102,11 +106,6 @@
   }
 
   function displayBtn() {
-    const result = Array.from(cards).every(card =>
-      card.classList.contains("rotate-js")
-    );
-    if (result) {
-      resetBtn.style.display = "block";
-    }
+    resetBtn.style.display = "block";
   }
 })();
