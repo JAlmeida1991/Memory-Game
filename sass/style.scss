@@ -1,31 +1,10 @@
-$cardBack: #ff9800;
-$cardFront: #ffc107;
-$cardBorder: #ff5722;
-$btnColor: #bdc3c7;
-$btnShadow: grey;
-
-*::before,
-*::after,
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "base";
 
 %card-side {
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
   font-weight: 600;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Comic Sans", "Comic Sans MS", cursive;
-  background-color: #eee;
 }
 
 .title {
@@ -77,7 +56,11 @@ body {
     // ** need position relative to set z-index **
     position: relative;
     z-index: 1;
-    background-color: $cardBack;
+    background-color: $cardFront;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &-back {
     @extend %card-side;
@@ -85,9 +68,9 @@ body {
     top: 0;
     left: 0;
     transform: rotateY(180deg);
-    background-color: $cardFront;
+    background-color: $cardBack;
     font-size: 2.5rem;
-    // ONLY FOR TESTING:
+
     display: flex;
     justify-content: center;
     align-items: center;
