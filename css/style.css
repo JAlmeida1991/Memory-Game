@@ -51,14 +51,14 @@ body {
           justify-content: center;
 }
 
-@media screen and (max-width: 35em) {
+@media only screen and (max-width: 35em) {
   .container {
     grid-gap: 0.75rem;
     width: 45rem;
   }
 }
 
-@media screen and (max-width: 30em) {
+@media only screen and (max-width: 30em) {
   .container {
     width: 35rem;
   }
@@ -125,14 +125,14 @@ body {
           align-items: center;
 }
 
-@media screen and (max-width: 35em) {
+@media only screen and (max-width: 35em) {
   .card {
     height: 11rem;
     width: 8rem;
   }
 }
 
-@media screen and (max-width: 30em) {
+@media only screen and (max-width: 30em) {
   .card {
     height: 9rem;
     width: 6rem;
@@ -161,12 +161,48 @@ body {
           box-shadow: none;
 }
 
-.fab {
-  color: #f44336;
-}
-
 .rotate-js {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+.fa-html5 {
+  color: orangered;
+}
+
+.fa-css3 {
+  color: blue;
+}
+
+.fa-js {
+  color: yellow;
+}
+
+.fa-sass {
+  color: hotpink;
+}
+
+.fa-git {
+  color: black;
+}
+
+.fa-react {
+  color: lightseagreen;
+}
+
+.fa-vuejs {
+  color: green;
+}
+
+.fa-angular {
+  color: red;
+}
+
+.fa-node-js {
+  color: lime;
+}
+
+.fa-npm {
+  color: crimson;
 }
 /*# sourceMappingURL=style.css.map */
