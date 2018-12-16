@@ -1,0 +1,22 @@
+.container {
+  margin: 2rem auto;
+  width: 50rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  &--btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 35em) {
+    gap: 0.75rem;
+    width: 35rem;
+  }
+
+  @media only screen and (max-width: 30em) {
+    width: 30rem;
+  }
+}

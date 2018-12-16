@@ -1,0 +1,18 @@
+.btn {
+  // display: none;
+  font-weight: bolder;
+  margin: 0 auto;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  background-color: $btnColor;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 0.3rem 0.2rem $btnShadow;
+
+  &:active {
+    transform: translateY(0.1rem);
+    box-shadow: none;
+  }
+}

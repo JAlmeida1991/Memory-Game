@@ -1,0 +1,56 @@
+%card-side {
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  font-weight: 600;
+}
+
+.card {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+  width: 9rem;
+  border: 0.5rem solid $cardBorder;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 2s ease;
+  perspective: 60rem;
+  transform-style: preserve-3d;
+  border-radius: 5px;
+
+  &-front {
+    @extend %card-side;
+    // ** need position relative to set z-index **
+    position: relative;
+    z-index: 1;
+    background-color: $cardFront;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-back {
+    @extend %card-side;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    background-color: lighten($cardBack, 20%);
+    font-size: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 35em) {
+    height: 11rem;
+    width: 8rem;
+  }
+  @media only screen and (max-width: 30em) {
+    height: 8.5rem;
+    width: 5.5rem;
+  }
+}
