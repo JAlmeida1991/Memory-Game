@@ -1,3 +1,4 @@
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import { cards, resetBtn } from "./globals";
 import { init, flipCard, resetGame } from "./helpers";
 

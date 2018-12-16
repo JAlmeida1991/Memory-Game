@@ -629,6 +629,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@fortawesome/fontawesome-free@^5.6.1":
+  version "5.6.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.6.1.tgz#eb096a49446d649bdc8c90f04400306eff7c33c2"
+  integrity sha512-0afQfB+HBeJHlXPzcF2Jjh78SbwPSkDjba/O7pZFzAW3WGKNzd4s4AqrZo7oIlMWGnfoyDo8+QeosK0+DTDrTg==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
